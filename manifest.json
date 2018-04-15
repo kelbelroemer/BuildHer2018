@@ -1,0 +1,19 @@
+{
+	"name": "BuildHer",
+	"description": "", //need description
+	"permissions": ["storage", ],
+	"version": "1.0",
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"page_action": {
+		"default_popup": "popup.html",
+		"default_icon": ""
+	}
+	//	"default_popup": "popup.html",
+	//	"default_icon": "" //need to add default icon
+	},
+
+	"manifest_version": 2,
+}

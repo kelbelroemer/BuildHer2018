@@ -1,19 +1,40 @@
-{
+{{
 	"name": "BuildHer",
-	"description": "", 
-	"permissions": ["storage", ],
-	"version": "1.0",
+	"description": "to show whether a movie passes the Bechdel test or not with a symbol at the bottom of the movie screen",
+	"permissions": ["https://*.neflix.com/*", "https://ajax.googleapis.com/", "tabs"],
+	"version": "2.3.0",
 	"background": {
 		"scripts": ["background.js"],
 		"persistent": false
 	},
+
 	"page_action": {
 		"default_popup": "popup.html",
-		"default_icon": ""
-	}
-		"default_popup": "popup.html",
-		"default_icon": "" 
+		"default_icon": "",
+		"default_title": "Bechdel Test"
+
 	},
+
+	"icons": {
+		"16": "",
+		"24": ""
+	},
+
+	"content_scripts": [
+	{
+		"matches": ["https://*.netflix.com/*"],
+		"css": ["stylesheets/contentscript.css"],
+		"js": [
+			"javascript/jquery-3.1.1.min.js",
+			"javascript/logger.js",
+			"javascript/omdb.js",
+			"javascript/ratings.js",
+			"javascript/inject.js",
+			"javascript/extract.js",
+			"javascript/contentscript.js"]
+		}
+	],
+
 
 	"manifest_version": 2,
 }

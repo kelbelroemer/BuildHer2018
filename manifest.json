@@ -1,11 +1,11 @@
 {
-	"name": "BuildHer",
-	"description": "to show whether a movie passes the Bechdel test or not with a symbol at the bottom of the movie screen",
-	"permissions": ["https://*.neflix.com/*", "https://ajax.googleapis.com/", "tabs"],
-	"version": "2.3.0",
+	"name": "ReelRepresent",
+	"description": "Add Bechdel Test rating to Netflix movie descriptions",
+	"permissions": ["https://*.neflix.com/*"],
+	"version": "0.1",
+
 	"background": {
-		"scripts": ["background.js"],
-		"persistent": false
+		"scripts": ["background.js"]
 	},
 
 	"page_action": {
@@ -15,23 +15,11 @@
 
 	},
 
-	"icons": {
-		"16": "",
-		"24": ""
-	},
-
 	"content_scripts": [
 	{
 		"matches": ["https://*.netflix.com/*"],
 		"css": ["stylesheets/contentscript.css"],
-		"js": [
-			"javascript/jquery-3.1.1.min.js",
-			"javascript/logger.js",
-			"javascript/omdb.js",
-			"javascript/ratings.js",
-			"javascript/inject.js",
-			"javascript/extract.js",
-			"javascript/contentscript.js"]
+		"js": ["javascript/jquery-3.1.1.min.js"]
 		}
 	],
 

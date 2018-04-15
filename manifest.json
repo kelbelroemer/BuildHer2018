@@ -1,4 +1,4 @@
-{{
+{
 	"name": "BuildHer",
 	"description": "to show whether a movie passes the Bechdel test or not with a symbol at the bottom of the movie screen",
 	"permissions": ["https://*.neflix.com/*", "https://ajax.googleapis.com/", "tabs"],
